@@ -1,5 +1,5 @@
 //write a function which take an array and a number
-// return the max sum number that are next to other, the other parameter number say how many.
+// return the max sum number that are next to other, the other parameter number say how many. 
 
 
 function maxSubarraySum(arr, num){
