@@ -133,20 +133,29 @@ class SinglyLinkedList{
         return removed;
     }
 
-    reverse(){
-        let node = this.head;
-        this.head = this.tail;
-        this.tail = node;
-        let next;
-        let prev = null;
-        for(let i = 0; i < this.length; i++){
-            next = node.next;
-            node.next = prev;
-            prev = node;
-            node = next;
-        }
-        return this;
+    // reverse(){
+    //     let node = this.head;
+    //     this.head = this.tail;
+    //     this.tail = node;
+    //     let next;
+    //     let prev = null;
+    //     for(let i = 0; i < this.length; i++){
+    //         next = node.next;
+    //         node.next = prev;
+    //         prev = node;
+    //         node = next;
+    //     }
+    //     return this;
        
+    // }
+    reverse() {
+        if (this.head === null || this.head.next === null) {
+            return this.head;
+        }
+        let remaining = this.reverse(this.head.next);
+        this.head.next.next = this.head; 
+        this.head.next = null;  
+        return remaining;
     }
 }
 
@@ -161,7 +170,7 @@ list.push(100);
 list.push(200);
 list.push(300);
 list.push(400)
-//list.unShifting("cioa");
+list.reverse();
 
 console.log(list);
 
