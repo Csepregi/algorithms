@@ -139,6 +139,24 @@ class DoublyLinkedList{
         this.length--;
         return removedNode;
     }
+
+//      reverse(head) {
+//         if (head === null || head.next === null) {
+//                return head;
+//         }
+      
+//        let temp = head;
+//        let newHead = head;
+//        while (temp != null) {
+//            let prev = temp.prev;
+//            temp.prev = temp.next;
+//            temp.next = prev;
+//            newHead = temp;
+//            temp = temp.prev;
+//        }
+//        return newHead;
+   
+//    }
 }
 
 
