@@ -19,5 +19,4 @@ function printAllPairs(n){
         }
     }
 }
-
-printAllPairs(6);
+//printAllPairs(6);
